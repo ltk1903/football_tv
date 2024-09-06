@@ -10,6 +10,6 @@ class User < ApplicationRecord
   private
 
   def send_welcome_email
-    UserMailer.with(user: self).welcome_email.deliver_now
+    UserMailer.welcome_email(self).deliver_now
   end
 end
