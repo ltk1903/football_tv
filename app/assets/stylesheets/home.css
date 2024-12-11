@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .flex-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .top-pick {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+
+  .cover {
+    position: relative;
+    width: 100%;
+    max-width: 610px;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  
+  .cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .cover .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .cover .title_cat {
+    display: block;
+    color: #fff;
+    font-size: 0.9em;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  .cover .title_cat:hover {
+    text-decoration: underline;
+  }
+  
+  .cover .title {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  
+  .cover .title:hover {
+    text-decoration: underline;
+  }
+  
+  .cover .sapo {
+    font-size: 0.9em;
+    margin: 10px 0 0;
+  }
+  
+
+  .w200 {
+    width: 200px;
+  }
+  
+  .scroll {
+    overflow-y: auto;
+    max-height: 500px;
+  }
+  
+  .pick_right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pick_right li {
+    margin-bottom: 15px;
+  }
+  
+  .pick_right h3 {
+    margin: 0;
+    font-size: 1em;
+  }
+  
+  .pick_right a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .pick_right a:hover {
+    text-decoration: underline;
+  }
+  
+  .pick_right .status_live {
+    display: inline-block;
+    background-color: #f00;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
+  }
+  
+
+  .bot-pick {
+    margin-top: 20px;
+  }
+  
+  .bot-pick ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .bot-pick li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .bot-pick a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .bot-pick a:hover {
+    text-decoration: underline;
+  }
+  
+  .bot-pick img {
+    max-height: 182px;
+    object-fit: cover;
+    width: auto;
+    height: auto;
+    margin-right: 15px;
+  }
+  
+  .bot-pick .content {
+    max-width: 500px;
+  }
+  
+  .bot-pick .title_cat {
+    color: #3b3636;
+    font-size: 0.9em;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .bot-pick .title_cat:hover {
+    text-decoration: underline;
+  }
+  
+  .bot-pick h2 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .bot-pick .special-line {
+    font-weight: bold;
+  }
+  
