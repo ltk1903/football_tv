@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>FootballTv</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>My App</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_importmap_tags %>
+</head>
+<body>
+  <div id="container">
+    <!-- Header -->
+    <header>
+      <%= image_tag 'logo.png', alt: 'logo', class: 'logo'%>
+      <h1>World Sports News</h1>
+      <nav>
+      <% if user_signed_in? %>
+        <p>Welcome, <%= current_user.email %>!</p>
+        <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout-link' %>
+      <% else %>
+        <%= link_to 'Login', new_user_session_path %> |
+        <%= link_to 'Sign Up', new_user_registration_path %>
+      <% end %>
+    </nav>
+    </header>
 
-  <body>
-    <%= yield %>
-  </body>
+    <div id="content">
+      <!-- Left Navigation -->
+      <nav id="left_nav">
+        <ul>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'About', root_path %></li>
+          <li><%= link_to 'Contact', root_path %></li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <div id="main_content">
+        <%= yield %>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer-info">
+        <div class="d-flex l-grid">
+          <p>
+            Copyrights 2024 Sports News. All rights reserved.<br>
+            Add: Ho Chi Minh city, Viet Nam. Editor: Tan Khang<br>
+            Tel: 0936534003 - Email: sportsworld@gmail.com<br>
+            Publication Permit: 141/GP-BTTTT.
+          </p>
+          <div class="link">
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'About', root_path %></li>
+            <li><%= link_to 'Contact', root_path %></li>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
 </html>
